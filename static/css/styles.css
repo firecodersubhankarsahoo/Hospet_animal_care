@@ -1,0 +1,217 @@
+.gradient-background {
+    background: linear-gradient(300deg, #0a0a0a, #1a1a1a, #2e2e2e, #1a1a1a, #0a0a0a);
+    background-size: 300% 300%;
+    animation: gradient-animation 5s ease infinite;
+}
+
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* .ss{
+    background-color: #171b1b;
+} */
+header {
+    background-color: #1c1717;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+nav ul li a:hover {
+    background-color: #575757;
+    border-radius: 5px;
+}
+
+main {
+    padding: 20px 0;
+}
+
+h2 {
+    margin-top: 0;
+}
+
+form label {
+    display: block;
+    margin-top: 10px;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+form button:hover {
+    background-color: #575757;
+}
+
+.features {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.feature {
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px #ccc;
+    margin: 10px;
+    flex: 1 1 200px;
+    text-align: center;
+}
+
+.feature h3 {
+    margin-top: 0;
+}
+
+.feature p {
+    font-size: 14px;
+}
+
+.feature .button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.feature .button:hover {
+    background-color: #575757;
+}
+
+.footer {
+    margin-top: 20px; /* Adds space above the footer */
+    padding: 10px 0; /* Adds padding inside the footer */
+    background-color: #f8f9fa; /* Example background color */
+    color: #6c757d; /* Example text color */
+    position: fixed; /* Ensure footer stays at the bottom */
+    bottom: 0; /* Ensure footer sticks to the bottom of the viewport */
+    width: 100%; /* Ensure footer spans the full width */
+}
+
+.logo{
+    width: 100px;
+}
+
+
+.brand {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem; /* Adjust font size as needed */
+    font-weight: bold; /* Adjust font weight if necessary */
+    color: #f94d4d; /* Set your desired font color */
+    /* Add any additional styling properties here */
+}
+.icon{
+    height: 100px;
+    border-radius: 50%;
+  }
+  header{
+  height: 100%;
+  }
+
+
+
+  
+/* Custom styles for the footer */
+footer {
+    background-color: #092847; /* Light gray background */
+    color: #6c757d; /* Text color */
+}
+
+footer a {
+    color: #6c757d; /* Link color */
+}
+
+footer a:hover {
+    color: #343a40; /* Darker color on hover */
+}
+
+footer .text-primary {
+    color: #007bff; /* Primary color for headings */
+}
+
+footer .link-secondary {
+    color: #6c757d; /* Secondary color for social icons */
+}
+
+footer .link-secondary:hover {
+    color: #343a40; /* Darker color on hover */
+}
+
+footer .text-muted {
+    color: #6c757d; /* Muted text color */
+}
+
+footer .bi {
+    font-size: 1.5rem; /* Icon size */
+    margin-right: 5px; /* Spacing for icons */
+}
+
+footer .border-top {
+    border-top: 1px solid #189f96; /* Top border color */
+    padding-top: 10px; /* Padding above the border */
+}
+
+
+

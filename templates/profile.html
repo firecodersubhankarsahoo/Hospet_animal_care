@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - Animal Care</title>
+    <link rel="stylesheet" href="../static/css/styles.css">
+    <style>
+
+        /* Profile Page Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #1c1717;
+            padding: 15px;
+            text-align: center;
+            color: white;
+        }
+
+        .header .icon {
+            height: 80px;
+            border-radius: 50%;
+        }
+
+        .brand {
+            font-weight: bold;
+            font-size: 1.5em;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .profile-container {
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            background-color: #ffffff;
+        }
+
+        .profile-info p {
+            font-size: 1.1em;
+            margin: 10px 0;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <img class="icon" src="../static/images/icon.png" alt="Animal Care Logo">
+            <h1 class="brand" ><span style="color: aliceblue;">HOS</span>PET</h1>
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/profile">Profile</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="profile-container">
+            <h2>My Profile</h2>
+            <div class="profile-info">
+                <p><strong>Full Name:</strong> <span id="fullName"></span></p>
+                <p><strong>Username:</strong> <span id="username"></span></p>
+                <p><strong>Email:</strong> <span id="email"></span></p>
+                <p><strong>Phone Number:</strong> <span id="phone"></span></p>
+            </div>
+            <button onclick="window.location.href='/logout'">Logout</button>
+        </div>
+    </main>
+    
+    <footer style="position: fixed; bottom: 0; width: 100%;">
+        <div class="container">
+            <p>&copy; 2024 Animal Care | <a href="/contact">Contact Us</a></p>
+        </div>
+    </footer>
+    <script>
+
+document.addEventListener("DOMContentLoaded", function() {
+    fetch("/api/profile")
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById("fullName").textContent = data.full_name;
+            document.getElementById("username").textContent = data.username;
+            document.getElementById("email").textContent = data.email;
+            document.getElementById("phone").textContent = data.phone_number;
+        })
+        .catch(error => console.error("Error fetching profile data:", error));
+});
+
+
+    </script>
+</body>
+</html>
